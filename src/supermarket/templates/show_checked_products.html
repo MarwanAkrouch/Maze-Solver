@@ -1,0 +1,25 @@
+<!DOCTYPE html> 
+
+<head>
+    <title> Checked Products Database </title>
+</head>
+
+<body>
+	<center> 
+		<h1> History of checked Products lists </h1>
+	</center>
+		<hr/> 
+			<ol>
+				{% for chkprod in item %}
+				<p>
+					<li>
+						<ul> {{chkprod.productsList}} </ul>
+					</li>
+				</p>
+
+				{% endfor %}
+			</ol>
+		<hr/> 
+</body>
+
+</html>

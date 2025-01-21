@@ -1,0 +1,23 @@
+<!DOCTYPE html> 
+
+<head>
+    <title> Products database </title>
+</head>
+
+<body>
+	<center> 
+	     	<h1>  Products available on the supermarket </h1>
+	</center>
+
+	<ol>
+		{% for prod in item %}
+		<p>
+			<li>
+				<ul> {{prod.order}} , {{prod.identity}} , {{prod.date}}, {{prod.name}} </ul>
+			</li>
+		</p>
+		{% endfor %}
+	</ol>
+</body>
+
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html> 
+
+<head>
+    <title> Choose solveur </title>
+</head>
+
+<body>
+	<center> 
+		<h1> Choose solveur </h1>
+		<hr/> 
+			<form method="POST" action="">
+			{% csrf_token %}
+				<input type="checkbox" name="solvers" value = "Qlearning_solver" /> Qlearning_solver
+				<input type="checkbox" name="solvers" value = "RO_solver" /> RO_solver
+			<p>
+				<button type="submit" > Upload choice </button>
+			</form>
+			</p>
+		<hr/> 
+	</center>
+</body>
+
+</html>

@@ -1,0 +1,54 @@
+<!-- Declare an html file-->
+<!DOCTYPE html> 
+<!-- Declare 'en' as this doc's language-->
+<html lang="en">
+
+<head>
+<!-- Encodage content as UTF-8-->
+    <meta charset="UTF-8"> 
+    <title> Data successfully uploaded </title>
+</head>
+
+<body>
+<!-- Bloc of the error message-->
+    {% if messages %}
+        {% for message in messages %}
+            <div>
+<!--                | means OR operator-->
+                <strong>{{message|safe}}</strong> <!-- very important message-->
+            </div>
+        {% endfor %}
+    {% else %}
+    <center>
+        <hr/> 
+            <h1> {{order}} <!-- prompt's order --></h1> 
+        <hr/> 
+        <hr/> 
+    <!-- Method 'POST' : Save in the database-->
+        <form action="" method="POST" enctype="multipart/form-data">
+
+            {% csrf_token %} <!-- Protect this form-->
+
+            <p>
+                <label for="file1"> Upload your .csv file here </label>
+                <input type="file" id="file1" name="file">
+                <small> Only .csv file </small>
+            </p>
+
+        <hr/> 
+            <button type="submit"> Upload file </button>
+        </form>
+
+        <hr/> 
+        </center>
+
+    {% endif %}
+
+    {% for products in data %}
+
+        {{products.filename}}
+
+    {% endfor %}
+
+</body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html> 
+<head>
+    <title> User's Selection </title>
+</head>
+
+<body>
+	<center>
+		<h1> Here you have to choose products that you want to purchase </h1>
+			<hr/> 
+				<form action='' method="POST"> {% csrf_token %}
+					<large> Select Here : </large> 
+						<p> 
+							{% for field in form %} 
+								{{ field }}
+							{% endfor %}	
+						</p>
+					<input type='submit' value='Save your choices' />
+				</form>
+			<hr/> 
+	</center>
+</body>
+
+</html>
