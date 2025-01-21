@@ -8,7 +8,6 @@ tools through Google OR libraries in python for the first solver, and Q-learning
 the second. Since our algorithms are implemented in python we used django framework to build
 the web interface for the user.
 
-## Installation
 
 1. **Install the requirements**:
    ```sh
